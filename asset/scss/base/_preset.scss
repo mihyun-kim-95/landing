@@ -1,0 +1,30 @@
+body{
+    font-family: 'SofiaPro';
+}
+
+.blind{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+}
+
+.cursor{
+    position: fixed;
+    top: 0; left: 0;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    z-index: 20;
+    pointer-events: none;
+    border-radius: 50%;
+    border: 1px solid #000;
+
+    &.hover{
+        width: 100px;
+        height: 100px;
+        mix-blend-mode: difference;
+    }
+}

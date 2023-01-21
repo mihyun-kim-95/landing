@@ -1,0 +1,49 @@
+.header{
+    .header-inner{
+        font-family: 'DegularDisplay';
+        position: fixed;
+        width: 100%;
+        padding: 55px 80px;
+        z-index: 5;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-100px);
+        transition: 0.4s;
+
+        @include mobile{
+           padding: 55px 50px;
+        }
+        .logo{
+            font-size: 32px;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+
+            &::after{
+                content: '';
+                display: block;
+                width: 50px;
+                height: 50px;    
+                background: url(../images/mh.png) no-repeat;
+                background-size: 50px 50px;
+            }
+        }
+
+        .btn-area{
+            display: flex;
+            gap: 30px;
+            font-size: 26px;
+            color: #fff;
+            margin-top: 10px;
+
+
+            @include mobile{
+                font-size: 21px;
+            }
+        }
+
+        &.slide{
+            transform: translateY(0px);
+        }
+    }
+}
