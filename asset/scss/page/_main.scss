@@ -108,7 +108,7 @@
                 color: #86898c;
 
                 @include mobile{
-                    font-size: 18px;
+                    font-size: 16px;
                  }
             }
 
@@ -132,7 +132,7 @@
                 line-height: 25px;
 
                 @include mobile{
-                    font-size: 18px;
+                    font-size: 14px;
                  }
             }
         }
@@ -316,7 +316,7 @@
             gap: 20px;
 
             .title-area{
-                width: 370px;
+                width: 350px;
                 height: 200px;
                 background: #fff;
                 border-radius: 150px;
