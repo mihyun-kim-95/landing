@@ -6,19 +6,6 @@ window.onload = function(){
     },100)
 }
 
-//헤더 스크롤 효과
-lastScroll = 0;
-$(window).scroll(function(){
-    current = $(this).scrollTop();
-
-    if (current > lastScroll) {
-        $('.header-inner').addClass('slide')
-    } else {
-        $('.header-inner').removeClass('slide')
-    }
-
-    lastScroll = current;
-})
 
 //마우스 효과
 $('body').mousemove(function(e){
@@ -47,42 +34,40 @@ $('body a').mouseleave(function(){
 ScrollTrigger.matchMedia({
     // large
     "(min-width: 1025px)": function() {
-        gsap.set('.header',{opacity:0})
-        gsap.set('.sc-intro .top',{opacity:0, y:150, rotate:-7})
-        gsap.set('.sc-intro .bottom',{opacity:0, y:150, rotate:7})
+        gsap.set('.sc-intro .top .wrap',{opacity:0, y:150, rotate:-7})
+        gsap.set('.sc-intro .bottom .wrap',{opacity:0, y:150, rotate:7})
         
         const tl1 = gsap.timeline({})
         
         tl1
-        .to('.sc-intro .title .wrap',{y:0, duration: 0.7})
+        .to('.sc-intro .title .wrap',{y:0, duration: 0.5})
         .to('.sc-intro .title .wrap',{scale: 0.1, y: -110, delay: 0.5, color: '#f3ed5d'})
         .addLabel('a')
         .to('.sc-intro',{background:"#000"},'a')
-        .to('.sc-intro .top',{opacity:1, y:0, rotate:0},'a')
-        .to('.sc-intro .bottom',{opacity:1, y:0, rotate:0})
-        .to('.header',{opacity:1})
+        .to('.sc-intro .top .wrap',{opacity:1, y:0, rotate:0},'a')
+        .to('.sc-intro .bottom .wrap',{opacity:1, y:0, rotate:0})
     },
       // medium
   "(min-width: 768px) and (max-width: 1024px)": function() {
     gsap.set('.header',{opacity:0})
-    gsap.set('.sc-intro .top',{opacity:0, y:150, rotate:-7})
-    gsap.set('.sc-intro .bottom',{opacity:0, y:150, rotate:7})
+    gsap.set('.sc-intro .top .wrap',{opacity:0, y:150, rotate:-7})
+    gsap.set('.sc-intro .bottom .wrap',{opacity:0, y:150, rotate:7})
     
     const tl1 = gsap.timeline({})
     
     tl1
     .to('.sc-intro .title .wrap',{y:0, duration: 0.7})
-    .to('.sc-intro .title .wrap',{scale: 0.1, y: -80, delay: 0.5, color: "#f3ed5d"})
+    .to('.sc-intro .title .wrap',{scale: 0.1, y: -50, delay: 0.5, color: "#f3ed5d"})
     .addLabel('a')
     .to('.sc-intro',{background:"#000"},'a')
-    .to('.sc-intro .top',{opacity:1, y:0, rotate:0},'a')
-    .to('.sc-intro .bottom',{opacity:1, y:0, rotate:0})
+    .to('.sc-intro .top .wrap',{opacity:1, y:0, rotate:0},'a')
+    .to('.sc-intro .bottom .wrap',{opacity:1, y:0, rotate:0})
     .to('.header',{opacity:1})
   },
   "(max-width: 767px)": function() {
     gsap.set('.header',{opacity:0})
-    gsap.set('.sc-intro .top',{opacity:0, y:150, rotate:-7})
-    gsap.set('.sc-intro .bottom',{opacity:0, y:150, rotate:7})
+    gsap.set('.sc-intro .top .wrap',{opacity:0, y:150, rotate:-7})
+    gsap.set('.sc-intro .bottom .wrap',{opacity:0, y:150, rotate:7})
     
     const tl1 = gsap.timeline({})
     
@@ -91,11 +76,13 @@ ScrollTrigger.matchMedia({
     .to('.sc-intro .title .wrap',{scale: 0.2, y: -25, delay: 0.5, color:'#f3ed5d'})
     .addLabel('a')
     .to('.sc-intro',{background:"#000"},'a')
-    .to('.sc-intro .top',{opacity:1, y:0, rotate:0},'a')
-    .to('.sc-intro .bottom',{opacity:1, y:0, rotate:0})
+    .to('.sc-intro .top .wrap',{opacity:1, y:0, rotate:0},'a')
+    .to('.sc-intro .bottom .wrap',{opacity:1, y:0, rotate:0})
     .to('.header',{opacity:1})
     },
 })
+
+
 
 //btn 이동
 $('.btn-projects').click(function(e){
@@ -122,32 +109,61 @@ gsap.to('.sc-aboutme .text-area', ({
 }))
 
 //projects 슬라이드 
-$('[data-right]').each(function(i,el){
+ScrollTrigger.matchMedia({
+    // large
+    "(min-width: 1025px)": function() {
+        $('[data-right]').each(function(i,el){
+            gsap.to(el, ({
+                scrollTrigger:{
+                    trigger:el,
+                    start:"0% 50%",
+                    end:"100% 60%",
+                    scrub: 3,
+                },
+                x: - 350,
+            }))
+        })
 
-    gsap.to(el, ({
-        scrollTrigger:{
-            trigger:el,
-            start:"0% 50%",
-            end:"100% 60%",
-            scrub: 3,
-        },
-        x: - 370,
-    }))
-})
+        $('[data-left]').each(function(i,el){
+            gsap.to(el, ({
+                scrollTrigger:{
+                    trigger:el,
+                    start:"0% 50%",
+                    end:"100% 60%",
+                    scrub: 3,
+                },
+                x: 350,
+            }))
+        })
+    },
+    // medium
+    "(min-width: 768px) and (max-width: 1024px)": function() {
+        $('[data-right]').each(function(i,el){
+            gsap.to(el, ({
+                scrollTrigger:{
+                    trigger:el,
+                    start:"0% 50%",
+                    end:"100% 60%",
+                    scrub: 3,
+                },
+                x: - 310,
+            }))
+        })
 
-//projects 슬라이드 - reverse
-$('[data-left]').each(function(i,el){
+        $('[data-left]').each(function(i,el){
+            gsap.to(el, ({
+                scrollTrigger:{
+                    trigger:el,
+                    start:"0% 50%",
+                    end:"100% 60%",
+                    scrub: 3,
+                },
+                x: 300,
+            }))
+        })
+    },
+  });
 
-    gsap.to(el, ({
-        scrollTrigger:{
-            trigger:el,
-            start:"0% 50%",
-            end:"100% 60%",
-            scrub: 3,
-        },
-        x: 370,
-    }))
-})
 
 //모바일 슬라이드 
 gsap.set('[data-mobileleft]',{x:-500})

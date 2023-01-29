@@ -7,11 +7,11 @@
         z-index: 5;
         display: flex;
         justify-content: space-between;
-        transform: translateY(-100px);
+        // transform: translateY(-100px);
         transition: 0.4s;
 
         @include mobile{
-           padding: 55px 50px;
+           padding: 55px 30px;
         }
         .logo{
             font-size: 32px;
@@ -26,6 +26,12 @@
                 height: 50px;    
                 background: url(../images/mh.png) no-repeat;
                 background-size: 50px 50px;
+
+                @include tablet{
+                    width: 35px;
+                    height: 35px;
+                    background-size: 35px 35px;
+                }
             }
         }
 
@@ -36,9 +42,12 @@
             color: #fff;
             margin-top: 10px;
 
+            @include tablet{
+                font-size: 24px;
+            }
 
             @include mobile{
-                font-size: 21px;
+                font-size: 16px;
             }
         }
 

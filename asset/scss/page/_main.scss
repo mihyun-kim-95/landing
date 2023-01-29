@@ -8,7 +8,7 @@
 
     .group-text{
         .text-wrap{
-            font-family: 'SofiaPro';
+            font-family: 'montreal';
             font-weight: 900;
             &.title{
                 position: absolute;
@@ -23,11 +23,11 @@
                 overflow: hidden;
 
                 @include tablet{
-                    font-size: 180px;
+                    font-size: 150px;
                 }
 
                 @include mobile{
-                    font-size: 70px;
+                    font-size: 60px;
                     letter-spacing: -2px;
                 }
 
@@ -55,18 +55,28 @@
                 font-weight: 900;
 
                 @include tablet{
-                    font-size: 150px;
+                    font-size: 140px;
                     line-height: 150px;
                 }
 
                 @include mobile{
-                    font-size: 75px;
+                    font-size: 60px;
                     line-height: 70px;
                     letter-spacing: -2px;
                 }
 
             .text-wrap{
                 display: block;
+                overflow: hidden;
+
+                .wrap{
+                    display: inline-block;
+                    transform: translateY(80%);
+                }
+
+                .word{
+                    display: inline-block;
+                }
             }
         }
     }
@@ -81,9 +91,8 @@
     justify-content: center;
     background: #000;
     color: #fff;
-    font-family: 'SofiaPro';
+    font-family: 'montreal';
     overflow: hidden;
-    font-family: 'DegularDisplay';
 
     @include mobile{
         padding: 20px;
@@ -107,6 +116,10 @@
             .line1{
                 color: #86898c;
 
+                @include tablet{
+                    font-size: 18px;
+                }
+
                 @include mobile{
                     font-size: 16px;
                  }
@@ -114,7 +127,11 @@
 
             .line2{
                 font-size: 28px;
-                font-family: 'SofiaPro';
+                font-family: 'montreal';
+
+                @include tablet{
+                    font-size: 24px;
+                }
 
                 @include mobile{
                     font-size: 24px;
@@ -123,11 +140,9 @@
         }
 
         .text-area{
-            font-size: 26px;
-            letter-spacing: 3px;
-
+            text-align: center;
             .desc{
-                font-size: 21px;
+                font-size: 16px;
                 color: #86898c;
                 line-height: 25px;
 
@@ -152,6 +167,7 @@
 
     .project{
         padding: 100px;
+
         .inner-wrap{
             position: relative;
             display: flex;
@@ -164,10 +180,17 @@
             .link-area{
                 width: 370px;
                 height: 200px;
-                background: #fff;
                 border-radius: 150px;
                 display: flex;
                 padding-bottom: 100px;
+                font-family: 'montreal';
+                font-weight: 700;
+                letter-spacing: 2px;
+
+                @include tablet{
+                    width: 340px;
+                    height: 200px;
+                }
 
 
                 .link-site{
@@ -182,6 +205,12 @@
 
             .title-area{
                 font-size: 80px;
+                font-family: 'montreal';
+                font-weight: 700;
+
+                @include tablet{
+                    font-size: 70px;
+                }
             }
 
             .info-area{
@@ -191,7 +220,7 @@
                 flex-direction: column;
                 gap: 20px;
                 justify-content: center;
-                font-family: 'DegularDisplay';
+                font-family: 'montreal';
 
                 .note-box{
                     display: flex;
@@ -231,6 +260,10 @@
                 right: -50px;
                 top: -60px;
                 background: #60cb6c;
+
+                @include tablet{
+                    right: -10px;
+                }
             }
         }
 
@@ -240,6 +273,10 @@
                 left: -50px;
                 top: -30px;
                 background: #2457a2;
+
+                @include tablet{
+                    left: -10px;
+                }
             }
             .title-area{
                 display: flex;
@@ -255,6 +292,10 @@
                 right: -50px;
                 top: -60px;
                 background: #ff6c4d;
+
+                @include tablet{
+                    right: -10px;
+                }
             }
         }
 
@@ -264,6 +305,10 @@
                 left: -50px;
                 top: -60px;
                 background: #377def;
+
+                @include tablet{
+                    left: -10px;
+                }
             }
         }
 
@@ -273,6 +318,10 @@
                 right: -50px;
                 top: -30px;
                 background: #ba59ff;
+
+                @include tablet{
+                    right: -10px;
+                }
             }
             .title-area{
                 display: flex;
@@ -288,6 +337,10 @@
                 left: -25px;
                 top: -30px;
                 background: #ff59ba;
+
+                @include tablet{
+                    left: -10px;
+                }
             }
             .title-area{
                 display: flex;
@@ -317,8 +370,8 @@
             gap: 20px;
 
             .title-area{
-                width: 350px;
-                height: 200px;
+                width: 280px;
+                height: 180px;
                 background: #fff;
                 border-radius: 150px;
                 padding-bottom: 100px;
@@ -328,7 +381,7 @@
                     text-align: center;
                     color: #000;
                     line-height: 200px;
-                    font-size: 50px;
+                    font-size: 45px;
                 }
             }
 

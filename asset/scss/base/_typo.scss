@@ -1,10 +1,4 @@
 @font-face {
-    font-family: 'bergenmono';
-    src: url(../fonts/bergenmono-regular-webfont.woff2) format('woff2');
-    font-weight: 400;
-}
-
-@font-face {
     font-family: 'DegularDisplay';
     src: url(../fonts/DegularDisplay-Medium.woff2) format('woff2');
     font-weight: 500;
@@ -16,14 +10,28 @@
     font-weight: 700;
 }
 
-@font-face {
-    font-family: 'SofiaPro';
-    src: url(../fonts/SofiaProBold.eb26396e.woff2) format('woff2');
-    font-weight: 700;
-}
 
 @font-face {
     font-family: 'pretendard';
     src: url(../fonts/Pretendard-Regular.woff2) format('woff2');
     font-weight: 400;
+}
+
+
+@font-face {
+    font-family: 'montreal';
+    src: url(../fonts/6223e8b065cd90f56d4dd032_PPNeueMontreal-Light) format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'montreal';
+    src: url(../fonts/db43c53578e4d_PPNeueMontreal-Book) format('woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'montreal';
+    src: url(../fonts/6223e8b07862120015255529_PPNeueMontreal-) format('woff2');
+    font-weight: 700;
 }

@@ -1,9 +1,4 @@
 @font-face {
-  font-family: "bergenmono";
-  src: url(../fonts/bergenmono-regular-webfont.woff2) format("woff2");
-  font-weight: 400;
-}
-@font-face {
   font-family: "DegularDisplay";
   src: url(../fonts/DegularDisplay-Medium.woff2) format("woff2");
   font-weight: 500;
@@ -14,14 +9,24 @@
   font-weight: 700;
 }
 @font-face {
-  font-family: "SofiaPro";
-  src: url(../fonts/SofiaProBold.eb26396e.woff2) format("woff2");
-  font-weight: 700;
-}
-@font-face {
   font-family: "pretendard";
   src: url(../fonts/Pretendard-Regular.woff2) format("woff2");
   font-weight: 400;
+}
+@font-face {
+  font-family: "montreal";
+  src: url(../fonts/6223e8b065cd90f56d4dd032_PPNeueMontreal-Light) format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "montreal";
+  src: url(../fonts/db43c53578e4d_PPNeueMontreal-Book) format("woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "montreal";
+  src: url(../fonts/6223e8b07862120015255529_PPNeueMontreal-) format("woff2");
+  font-weight: 700;
 }
 * {
   margin: 0;
@@ -116,12 +121,11 @@ body {
   z-index: 5;
   display: flex;
   justify-content: space-between;
-  transform: translateY(-100px);
   transition: 0.4s;
 }
 @media (max-width: 767px) {
   .header .header-inner {
-    padding: 55px 50px;
+    padding: 55px 30px;
   }
 }
 .header .header-inner .logo {
@@ -138,6 +142,13 @@ body {
   background: url(../images/mh.png) no-repeat;
   background-size: 50px 50px;
 }
+@media (max-width: 1023px) {
+  .header .header-inner .logo::after {
+    width: 35px;
+    height: 35px;
+    background-size: 35px 35px;
+  }
+}
 .header .header-inner .btn-area {
   display: flex;
   gap: 30px;
@@ -145,9 +156,14 @@ body {
   color: #fff;
   margin-top: 10px;
 }
+@media (max-width: 1023px) {
+  .header .header-inner .btn-area {
+    font-size: 24px;
+  }
+}
 @media (max-width: 767px) {
   .header .header-inner .btn-area {
-    font-size: 21px;
+    font-size: 16px;
   }
 }
 .header .header-inner.slide {
@@ -174,7 +190,7 @@ body {
 }
 @media (max-width: 767px) {
   .footer .group-flex {
-    flex-direction: column;
+    padding-bottom: 200px;
   }
 }
 .footer .group-flex .bottom-line {
@@ -188,7 +204,8 @@ body {
 .footer .group-flex .title-area {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 5px;
+  font-family: "montreal";
 }
 @media (max-width: 1023px) {
   .footer .group-flex .title-area {
@@ -198,24 +215,29 @@ body {
 }
 @media (max-width: 767px) {
   .footer .group-flex .title-area {
-    width: 300px;
+    width: 100%;
   }
 }
 .footer .group-flex .title-area .title {
-  font-size: 90px;
-  line-height: 60px;
+  width: 70%;
+  font-size: 100px;
+  line-height: 80px;
   letter-spacing: -5px;
+  font-weight: 700;
 }
 @media (max-width: 1023px) {
   .footer .group-flex .title-area .title {
+    width: 70%;
     font-size: 70px;
-    line-height: 80px;
+    line-height: 60px;
+    letter-spacing: 0.2px;
   }
 }
 @media (max-width: 767px) {
   .footer .group-flex .title-area .title {
-    font-size: 50px;
-    line-height: 50px;
+    width: 100%;
+    font-size: 40px;
+    line-height: 40px;
   }
 }
 .footer .group-flex .title-area .subtitle-wrap {
@@ -236,7 +258,7 @@ body {
 }
 @media (max-width: 767px) {
   .footer .group-flex .title-area .subtitle-wrap .subtitle {
-    font-size: 28px;
+    font-size: 21px;
   }
 }
 .footer .group-flex .title-area .subtitle-wrap .circle {
@@ -254,10 +276,17 @@ body {
   border: 2px solid #000;
   border-radius: 50%;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .footer .group-flex .title-area .subtitle-wrap .circle::after {
     width: 40px;
     height: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .footer .group-flex .title-area .subtitle-wrap .circle::after {
+    width: 30px;
+    height: 30px;
+    margin-left: 0;
   }
 }
 .footer .group-flex .title-area .subtitle-wrap .circle svg {
@@ -269,13 +298,19 @@ body {
   height: 26px;
   z-index: 3;
 }
+@media (max-width: 1023px) {
+  .footer .group-flex .title-area .subtitle-wrap .circle svg {
+    width: 18px;
+    height: 18px;
+  }
+}
 @media (max-width: 767px) {
   .footer .group-flex .title-area .subtitle-wrap .circle svg {
     position: absolute;
-    top: 13px;
-    left: 12px;
-    width: 16px;
-    height: 13px;
+    top: 10px;
+    left: 8px;
+    width: 14px;
+    height: 12px;
     transform: rotate(90deg);
   }
 }
@@ -283,40 +318,51 @@ body {
   fill: #000;
 }
 .footer .group-flex .link-area {
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
-  gap: 20px;
+  gap: 30px;
   flex-direction: column;
   font-family: "DegularDisplay";
 }
 @media (max-width: 1023px) {
   .footer .group-flex .link-area {
-    gap: 15px;
-    padding-top: 30px;
-    margin-right: 20px;
+    gap: 20px;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .footer .group-flex .link-area {
+    position: absolute;
+    left: 0;
+    margin-top: 180px;
   }
 }
 .footer .group-flex .link-area a {
-  font-size: 40px;
+  font-size: 45px;
   line-height: 25px;
 }
 @media (max-width: 1023px) {
   .footer .group-flex .link-area a {
-    font-size: 38px;
+    font-size: 36px;
   }
 }
 @media (max-width: 767px) {
   .footer .group-flex .link-area a {
-    font-size: 27px;
+    font-size: 21px;
+    line-height: 21px;
   }
 }
 .footer .group-copy {
   position: absolute;
   bottom: 40px;
-  right: 50px;
+  right: 90px;
 }
 @media (max-width: 1023px) {
   .footer .group-copy {
     font-size: 15px;
+    right: 50px;
   }
 }
 @media (max-width: 767px) {
@@ -333,7 +379,7 @@ body {
   overflow: hidden;
 }
 .sc-intro .group-text .text-wrap {
-  font-family: "SofiaPro";
+  font-family: "montreal";
   font-weight: 900;
 }
 .sc-intro .group-text .text-wrap.title {
@@ -350,12 +396,12 @@ body {
 }
 @media (max-width: 1023px) {
   .sc-intro .group-text .text-wrap.title {
-    font-size: 180px;
+    font-size: 150px;
   }
 }
 @media (max-width: 767px) {
   .sc-intro .group-text .text-wrap.title {
-    font-size: 70px;
+    font-size: 60px;
     letter-spacing: -2px;
   }
 }
@@ -380,19 +426,27 @@ body {
 }
 @media (max-width: 1023px) {
   .sc-intro .group-text .inner-text {
-    font-size: 150px;
+    font-size: 140px;
     line-height: 150px;
   }
 }
 @media (max-width: 767px) {
   .sc-intro .group-text .inner-text {
-    font-size: 75px;
+    font-size: 60px;
     line-height: 70px;
     letter-spacing: -2px;
   }
 }
 .sc-intro .group-text .inner-text .text-wrap {
   display: block;
+  overflow: hidden;
+}
+.sc-intro .group-text .inner-text .text-wrap .wrap {
+  display: inline-block;
+  transform: translateY(80%);
+}
+.sc-intro .group-text .inner-text .text-wrap .word {
+  display: inline-block;
 }
 
 .sc-aboutme {
@@ -403,9 +457,8 @@ body {
   justify-content: center;
   background: #000;
   color: #fff;
-  font-family: "SofiaPro";
+  font-family: "montreal";
   overflow: hidden;
-  font-family: "DegularDisplay";
 }
 @media (max-width: 767px) {
   .sc-aboutme {
@@ -430,6 +483,11 @@ body {
 .sc-aboutme .inner .name-area .line1 {
   color: #86898c;
 }
+@media (max-width: 1023px) {
+  .sc-aboutme .inner .name-area .line1 {
+    font-size: 18px;
+  }
+}
 @media (max-width: 767px) {
   .sc-aboutme .inner .name-area .line1 {
     font-size: 16px;
@@ -437,7 +495,12 @@ body {
 }
 .sc-aboutme .inner .name-area .line2 {
   font-size: 28px;
-  font-family: "SofiaPro";
+  font-family: "montreal";
+}
+@media (max-width: 1023px) {
+  .sc-aboutme .inner .name-area .line2 {
+    font-size: 24px;
+  }
 }
 @media (max-width: 767px) {
   .sc-aboutme .inner .name-area .line2 {
@@ -445,11 +508,10 @@ body {
   }
 }
 .sc-aboutme .inner .text-area {
-  font-size: 26px;
-  letter-spacing: 3px;
+  text-align: center;
 }
 .sc-aboutme .inner .text-area .desc {
-  font-size: 21px;
+  font-size: 16px;
   color: #86898c;
   line-height: 25px;
 }
@@ -485,10 +547,18 @@ body {
 .sc-projects .project .inner-wrap .link-area {
   width: 370px;
   height: 200px;
-  background: #fff;
   border-radius: 150px;
   display: flex;
   padding-bottom: 100px;
+  font-family: "montreal";
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+@media (max-width: 1023px) {
+  .sc-projects .project .inner-wrap .link-area {
+    width: 340px;
+    height: 200px;
+  }
 }
 .sc-projects .project .inner-wrap .link-area .link-site {
   position: absolute;
@@ -500,6 +570,13 @@ body {
 }
 .sc-projects .project .inner-wrap .title-area {
   font-size: 80px;
+  font-family: "montreal";
+  font-weight: 700;
+}
+@media (max-width: 1023px) {
+  .sc-projects .project .inner-wrap .title-area {
+    font-size: 70px;
+  }
 }
 .sc-projects .project .inner-wrap .info-area .link-notes {
   width: 280px;
@@ -507,7 +584,7 @@ body {
   flex-direction: column;
   gap: 20px;
   justify-content: center;
-  font-family: "DegularDisplay";
+  font-family: "montreal";
 }
 .sc-projects .project .inner-wrap .info-area .link-notes .note-box {
   display: flex;
@@ -537,11 +614,21 @@ body {
   top: -60px;
   background: #60cb6c;
 }
+@media (max-width: 1023px) {
+  .sc-projects .project.naver .link-area {
+    right: -10px;
+  }
+}
 .sc-projects .project.seoul .link-area {
   position: absolute;
   left: -50px;
   top: -30px;
   background: #2457a2;
+}
+@media (max-width: 1023px) {
+  .sc-projects .project.seoul .link-area {
+    left: -10px;
+  }
 }
 .sc-projects .project.seoul .title-area {
   display: flex;
@@ -555,17 +642,32 @@ body {
   top: -60px;
   background: #ff6c4d;
 }
+@media (max-width: 1023px) {
+  .sc-projects .project.andar .link-area {
+    right: -10px;
+  }
+}
 .sc-projects .project.toss .link-area {
   position: absolute;
   left: -50px;
   top: -60px;
   background: #377def;
 }
+@media (max-width: 1023px) {
+  .sc-projects .project.toss .link-area {
+    left: -10px;
+  }
+}
 .sc-projects .project.pastelmall .link-area {
   position: absolute;
   right: -50px;
   top: -30px;
   background: #ba59ff;
+}
+@media (max-width: 1023px) {
+  .sc-projects .project.pastelmall .link-area {
+    right: -10px;
+  }
 }
 .sc-projects .project.pastelmall .title-area {
   display: flex;
@@ -578,6 +680,11 @@ body {
   left: -25px;
   top: -30px;
   background: #ff59ba;
+}
+@media (max-width: 1023px) {
+  .sc-projects .project.cinecasero .link-area {
+    left: -10px;
+  }
 }
 .sc-projects .project.cinecasero .title-area {
   display: flex;
@@ -606,8 +713,8 @@ body {
   gap: 20px;
 }
 .sc-projects .mobile-project .inner-wrap .title-area {
-  width: 350px;
-  height: 200px;
+  width: 280px;
+  height: 180px;
   background: #fff;
   border-radius: 150px;
   padding-bottom: 100px;
@@ -617,7 +724,7 @@ body {
   text-align: center;
   color: #000;
   line-height: 200px;
-  font-size: 50px;
+  font-size: 45px;
 }
 .sc-projects .mobile-project .inner-wrap .link-area {
   display: flex;
