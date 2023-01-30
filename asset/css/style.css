@@ -14,18 +14,8 @@
   font-weight: 400;
 }
 @font-face {
-  font-family: "montreal";
-  src: url(../fonts/6223e8b065cd90f56d4dd032_PPNeueMontreal-Light) format("woff2");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "montreal";
-  src: url(../fonts/db43c53578e4d_PPNeueMontreal-Book) format("woff2");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "montreal";
-  src: url(../fonts/6223e8b07862120015255529_PPNeueMontreal-) format("woff2");
+  font-family: "SofiaPro";
+  src: url(../fonts/SofiaProBold.eb26396e.woff2) format("woff2");
   font-weight: 700;
 }
 * {
@@ -83,7 +73,7 @@ table {
 }
 
 body {
-  font-family: "SofiaPro";
+  font-family: "DegularDisplay";
 }
 
 .blind {
@@ -205,7 +195,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  font-family: "montreal";
 }
 @media (max-width: 1023px) {
   .footer .group-flex .title-area {
@@ -215,15 +204,17 @@ body {
 }
 @media (max-width: 767px) {
   .footer .group-flex .title-area {
-    width: 100%;
+    width: 75%;
   }
 }
 .footer .group-flex .title-area .title {
   width: 70%;
-  font-size: 100px;
-  line-height: 80px;
+  font-size: 120px;
+  line-height: 85px;
   letter-spacing: -5px;
   font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
 }
 @media (max-width: 1023px) {
   .footer .group-flex .title-area .title {
@@ -248,7 +239,6 @@ body {
   transform: translateX(10%);
 }
 .footer .group-flex .title-area .subtitle-wrap .subtitle {
-  font-family: "DegularDisplay";
   font-size: 50px;
 }
 @media (max-width: 1023px) {
@@ -322,13 +312,12 @@ body {
   top: 0;
   right: 0;
   display: flex;
-  gap: 30px;
+  gap: 40px;
   flex-direction: column;
-  font-family: "DegularDisplay";
 }
 @media (max-width: 1023px) {
   .footer .group-flex .link-area {
-    gap: 20px;
+    gap: 30px;
     margin-right: 10px;
   }
 }
@@ -336,7 +325,7 @@ body {
   .footer .group-flex .link-area {
     position: absolute;
     left: 0;
-    margin-top: 180px;
+    margin-top: 160px;
   }
 }
 .footer .group-flex .link-area a {
@@ -378,17 +367,13 @@ body {
   background: #fff;
   overflow: hidden;
 }
-.sc-intro .group-text .text-wrap {
-  font-family: "montreal";
-  font-weight: 900;
-}
 .sc-intro .group-text .text-wrap.title {
   position: absolute;
   top: 200px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 250px;
-  letter-spacing: -15px;
+  letter-spacing: 5px;
   font-weight: bold;
   color: #000;
   display: block;
@@ -402,7 +387,7 @@ body {
 @media (max-width: 767px) {
   .sc-intro .group-text .text-wrap.title {
     font-size: 60px;
-    letter-spacing: -2px;
+    letter-spacing: 2px;
   }
 }
 .sc-intro .group-text .text-wrap.title .wrap {
@@ -417,8 +402,8 @@ body {
   left: 50%;
   top: 40%;
   transform: translateX(-50%);
-  font-size: 230px;
-  letter-spacing: -10px;
+  font-size: 220px;
+  letter-spacing: 8px;
   line-height: 200px;
   text-align: center;
   color: #f3ed5d;
@@ -434,7 +419,7 @@ body {
   .sc-intro .group-text .inner-text {
     font-size: 60px;
     line-height: 70px;
-    letter-spacing: -2px;
+    letter-spacing: 2px;
   }
 }
 .sc-intro .group-text .inner-text .text-wrap {
@@ -457,7 +442,6 @@ body {
   justify-content: center;
   background: #000;
   color: #fff;
-  font-family: "montreal";
   overflow: hidden;
 }
 @media (max-width: 767px) {
@@ -495,7 +479,6 @@ body {
 }
 .sc-aboutme .inner .name-area .line2 {
   font-size: 28px;
-  font-family: "montreal";
 }
 @media (max-width: 1023px) {
   .sc-aboutme .inner .name-area .line2 {
@@ -550,9 +533,9 @@ body {
   border-radius: 150px;
   display: flex;
   padding-bottom: 100px;
-  font-family: "montreal";
   font-weight: 700;
   letter-spacing: 2px;
+  font-family: "SofiaPro";
 }
 @media (max-width: 1023px) {
   .sc-projects .project .inner-wrap .link-area {
@@ -570,7 +553,6 @@ body {
 }
 .sc-projects .project .inner-wrap .title-area {
   font-size: 80px;
-  font-family: "montreal";
   font-weight: 700;
 }
 @media (max-width: 1023px) {
@@ -584,7 +566,6 @@ body {
   flex-direction: column;
   gap: 20px;
   justify-content: center;
-  font-family: "montreal";
 }
 .sc-projects .project .inner-wrap .info-area .link-notes .note-box {
   display: flex;
@@ -595,6 +576,8 @@ body {
   font-size: 24px;
   letter-spacing: 3px;
   margin-bottom: 3px;
+  font-family: "SofiaPro";
+  font-weight: normal;
 }
 .sc-projects .project .inner-wrap .info-area .link-notes .note-box svg {
   transition: 0.4s;
@@ -723,13 +706,15 @@ body {
   display: block;
   text-align: center;
   color: #000;
-  line-height: 200px;
-  font-size: 45px;
+  line-height: 180px;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color: #fff;
 }
 .sc-projects .mobile-project .inner-wrap .link-area {
   display: flex;
   gap: 20px;
-  font-size: 20px;
+  font-size: 18px;
 }
 .sc-projects .mobile-project .inner-wrap .link-area a {
   position: relative;

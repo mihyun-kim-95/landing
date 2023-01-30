@@ -41,7 +41,7 @@ ScrollTrigger.matchMedia({
         
         tl1
         .to('.sc-intro .title .wrap',{y:0, duration: 0.5})
-        .to('.sc-intro .title .wrap',{scale: 0.1, y: -110, delay: 0.5, color: '#f3ed5d'})
+        .to('.sc-intro .title .wrap',{scale: 0.1, y: -110, delay: 0.3, color: '#f3ed5d'})
         .addLabel('a')
         .to('.sc-intro',{background:"#000"},'a')
         .to('.sc-intro .top .wrap',{opacity:1, y:0, rotate:0},'a')
@@ -56,8 +56,8 @@ ScrollTrigger.matchMedia({
     const tl1 = gsap.timeline({})
     
     tl1
-    .to('.sc-intro .title .wrap',{y:0, duration: 0.7})
-    .to('.sc-intro .title .wrap',{scale: 0.1, y: -50, delay: 0.5, color: "#f3ed5d"})
+    .to('.sc-intro .title .wrap',{y:0, duration: 0.5})
+    .to('.sc-intro .title .wrap',{scale: 0.1, y: -50, delay: 0.3, color: "#f3ed5d"})
     .addLabel('a')
     .to('.sc-intro',{background:"#000"},'a')
     .to('.sc-intro .top .wrap',{opacity:1, y:0, rotate:0},'a')
@@ -72,8 +72,8 @@ ScrollTrigger.matchMedia({
     const tl1 = gsap.timeline({})
     
     tl1
-    .to('.sc-intro .title .wrap',{y:0, duration: 0.7})
-    .to('.sc-intro .title .wrap',{scale: 0.2, y: -25, delay: 0.5, color:'#f3ed5d'})
+    .to('.sc-intro .title .wrap',{y:0, duration: 0.5})
+    .to('.sc-intro .title .wrap',{scale: 0.2, y: -25, delay: 0.3, color:'#f3ed5d'})
     .addLabel('a')
     .to('.sc-intro',{background:"#000"},'a')
     .to('.sc-intro .top .wrap',{opacity:1, y:0, rotate:0},'a')
@@ -81,6 +81,22 @@ ScrollTrigger.matchMedia({
     .to('.header',{opacity:1})
     },
 })
+
+
+const headertl = gsap.timeline({
+    scrollTrigger:{
+    trigger:".sc-intro",
+    start: "0% 0%",
+    end: "80% 10%",
+    scrub: 3,
+    },
+})
+
+headertl
+.addLabel('a')
+.to('.sc-intro .text-wrap.title',{y:-300, scale: 1.5})
+.to('.sc-intro .text-wrap.top',{x:-1000, scale: 1.8},'a')
+.to('.sc-intro .text-wrap.bottom',{x:1000,  scale: 1.8},'a')
 
 
 

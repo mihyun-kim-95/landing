@@ -8,15 +8,13 @@
 
     .group-text{
         .text-wrap{
-            font-family: 'montreal';
-            font-weight: 900;
             &.title{
                 position: absolute;
                 top: 200px;
                 left: 50%;
                 transform: translateX(-50%);
                 font-size: 250px;
-                letter-spacing: -15px;
+                letter-spacing: 5px;
                 font-weight: bold;
                 color: #000;
                 display: block;
@@ -28,7 +26,7 @@
 
                 @include mobile{
                     font-size: 60px;
-                    letter-spacing: -2px;
+                    letter-spacing: 2px;
                 }
 
                 .wrap{
@@ -47,8 +45,8 @@
                 left: 50%;
                 top: 40%;
                 transform: translateX(-50%);
-                font-size: 230px;
-                letter-spacing: -10px;
+                font-size: 220px;
+                letter-spacing: 8px;
                 line-height: 200px;
                 text-align: center;
                 color: #f3ed5d;
@@ -62,7 +60,7 @@
                 @include mobile{
                     font-size: 60px;
                     line-height: 70px;
-                    letter-spacing: -2px;
+                    letter-spacing: 2px;
                 }
 
             .text-wrap{
@@ -91,7 +89,6 @@
     justify-content: center;
     background: #000;
     color: #fff;
-    font-family: 'montreal';
     overflow: hidden;
 
     @include mobile{
@@ -127,7 +124,6 @@
 
             .line2{
                 font-size: 28px;
-                font-family: 'montreal';
 
                 @include tablet{
                     font-size: 24px;
@@ -183,9 +179,9 @@
                 border-radius: 150px;
                 display: flex;
                 padding-bottom: 100px;
-                font-family: 'montreal';
                 font-weight: 700;
                 letter-spacing: 2px;
+                font-family: 'SofiaPro';
 
                 @include tablet{
                     width: 340px;
@@ -205,7 +201,6 @@
 
             .title-area{
                 font-size: 80px;
-                font-family: 'montreal';
                 font-weight: 700;
 
                 @include tablet{
@@ -220,7 +215,6 @@
                 flex-direction: column;
                 gap: 20px;
                 justify-content: center;
-                font-family: 'montreal';
 
                 .note-box{
                     display: flex;
@@ -231,6 +225,8 @@
                         font-size: 24px;
                         letter-spacing: 3px;
                         margin-bottom: 3px;
+                        font-family: 'SofiaPro';
+                        font-weight: normal;
                     }
 
                     svg{
@@ -380,15 +376,17 @@
                     display: block;
                     text-align: center;
                     color: #000;
-                    line-height: 200px;
-                    font-size: 45px;
+                    line-height: 180px;
+                    font-size: 40px;
+                    letter-spacing: 2px;
+                    color: #fff;
                 }
             }
 
             .link-area{
                 display: flex;
                 gap: 20px;
-                font-size: 20px;
+                font-size: 18px;
 
                 a{
                     position: relative;
