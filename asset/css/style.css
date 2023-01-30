@@ -228,7 +228,7 @@ body {
   .footer .group-flex .title-area .title {
     width: 100%;
     font-size: 40px;
-    line-height: 40px;
+    line-height: 35px;
   }
 }
 .footer .group-flex .title-area .subtitle-wrap {
@@ -248,7 +248,7 @@ body {
 }
 @media (max-width: 767px) {
   .footer .group-flex .title-area .subtitle-wrap .subtitle {
-    font-size: 21px;
+    font-size: 28px;
   }
 }
 .footer .group-flex .title-area .subtitle-wrap .circle {
@@ -326,6 +326,7 @@ body {
     position: absolute;
     left: 0;
     margin-top: 160px;
+    gap: 20px;
   }
 }
 .footer .group-flex .link-area a {
@@ -704,7 +705,7 @@ body {
 .sc-projects .mobile-project .inner-wrap .title-area em {
   display: block;
   text-align: center;
-  color: #000;
+  color: #fff;
   line-height: 180px;
   font-size: 40px;
   letter-spacing: 2px;
